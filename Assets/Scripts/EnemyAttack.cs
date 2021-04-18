@@ -28,7 +28,6 @@ public class EnemyAttack : MonoBehaviour
     {
         if (grr)
         {
-            
             float distance = Vector3.Distance(transform.position, estoyEnfadadoCon.transform.position);
             
             if (distance > atkDist && distance < seeDist)
@@ -72,8 +71,6 @@ public class EnemyAttack : MonoBehaviour
                     a = 0;
                     b = 0;
                 }
-                
-                
             }
         }
         Debug.Log("Values: a= " + a);
@@ -81,7 +78,6 @@ public class EnemyAttack : MonoBehaviour
 
     private void follow(Transform target)
     {
-        
         me.AddForce((target.transform.position - transform.position).normalized * speed);
     }
 }

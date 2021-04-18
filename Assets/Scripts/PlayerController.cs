@@ -6,10 +6,8 @@ public class PlayerController : MonoBehaviour
 {
     private SpriteRenderer mySpriteRenderer;
     Rigidbody2D rb;
-    Vector2 LookDir;
     public float velocity = 5f;
     public Animator animator;
-    [SerializeField] FieldOfView fov;
     float horizontal, vertical;
     public bool tiempoespera = false;
     public bool tiempogas = false;
@@ -21,7 +19,6 @@ public class PlayerController : MonoBehaviour
     }
     void Start()
     {
-        
         rb = GetComponent<Rigidbody2D>();
     }
     void Update()
@@ -30,14 +27,10 @@ public class PlayerController : MonoBehaviour
         vertical = Input.GetAxisRaw("Vertical");
 
         animator.SetFloat("Speed", Mathf.Abs(horizontal));
-
         Control();
-        fov.SetOrigin(transform.position);
-        
     }
     void Control()
     {
-        // LookAtMouse();
         rb.velocity = new Vector2(horizontal, vertical).normalized * velocity;
         if(horizontal < -0.1f)
         {
@@ -52,22 +45,13 @@ public class PlayerController : MonoBehaviour
             mySpriteRenderer.flipX = false;
         }
     }
-    void LookAtMouse()
+    /*private void OnTriggerEnter2D(Collider2D sierra)
     {
-        LookDir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
-        transform.up = LookDir;
-    }
-
-    private void OnTriggerEnter2D(Collider2D sierra)
-    {
-
-
         if (sierra.tag == "Sierra" && !tiempoespera)
         {
             vida -= 50;
             tiempoespera = true;
             StartCoroutine("EsperarSierra");
-
         }
     }
     public IEnumerator EsperarSierra()
@@ -79,7 +63,6 @@ public class PlayerController : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         tiempogas = false;
-        
     }
     private void OnTriggerStay2D(Collider2D gas)
     {
@@ -89,6 +72,5 @@ public class PlayerController : MonoBehaviour
                 tiempogas = true;
                 StartCoroutine("EsperarGas");
         }
-        
-    }
+    }*/
 }

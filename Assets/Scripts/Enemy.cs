@@ -4,16 +4,17 @@ public class Enemy : MonoBehaviour
 {
     public int maxHealth = 100;
     int currentHealth;
-    // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
     }
 
+    // quitar vida 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
 
+        // si la vida llega a 0, muere
         if(currentHealth <= 0)
         {
             Die();
@@ -22,9 +23,8 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        //die animation
         Debug.Log("Enemy died");
-        //disable enemy
+        // se destruye el enemigo
         Destroy(gameObject);
     }
 }

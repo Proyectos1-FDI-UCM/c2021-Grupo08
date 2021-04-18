@@ -52,3 +52,6 @@ TagManager:
   - name: cartel
     uniqueID: 959247039
     locked: 0
+  - name: Black
+    uniqueID: 3249519861
+    locked: 0

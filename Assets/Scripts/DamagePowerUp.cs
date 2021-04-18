@@ -7,9 +7,11 @@ public class DamagePowerUp : MonoBehaviour
     public int multiplier, duration;
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.GetComponent<PlayerController>())
+        //si la colision es el player
+        if (col.gameObject.GetComponent<PlayerController>() != null)
         {
             GameObject player = col.gameObject;
+            // hacer daño cada cierto tiempo
             StartCoroutine(Damage(player));
                 
             GetComponent<SpriteRenderer>().enabled = false;

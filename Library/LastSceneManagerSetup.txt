@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/PROYECTO HITO 1.unity
+- path: Assets/Scenes/PROYECTO HITO 1.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

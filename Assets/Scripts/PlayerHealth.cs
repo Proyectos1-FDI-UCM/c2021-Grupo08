@@ -11,5 +11,32 @@ public class PlayerHealth : MonoBehaviour
         }
     }
     */
-    
+    public LifeBar healthBar;
+
+    void Awake()
+    {
+        health = maxHealth;
+    }
+
+    void Start()
+    {
+        healthBar.SetMaxHealth(maxHealth);
+
+    }
+    void Update()
+    {
+        if (Input.GetKeyDown("l"))
+        {
+            TakeDamage(20);
+        }
+    }
+
+    void TakeDamage(int danyo)
+    {
+        health -= danyo;
+
+        healthBar.SetHealth(health);
+    }
+
+
 }
