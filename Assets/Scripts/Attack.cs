@@ -17,7 +17,7 @@ public class Attack : MonoBehaviour
         if(Time.time >= nextAttackTime)
         {
             // ataque
-            if(Input.GetKeyDown("v"))
+            if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown("v"))
             {
                 Attacking();
                 nextAttackTime = (Time.time + 1f)/ attackRate;
