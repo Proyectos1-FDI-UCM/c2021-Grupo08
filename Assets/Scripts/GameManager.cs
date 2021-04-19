@@ -1,9 +1,13 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     private static GameManager instance; //Definimos la instancia del game manager. Paso imprescindible para el Singleton
-    int damage;
+    public string[] scenesInOrder;
+    public GameObject menuCanvas, pauseCanvas;
+    int stage=1;
+    bool gamePaused = false;
     void Awake() //Utilizamos awake en vez de Start para asegurarnos que la UIManager se inicia antes que cualquier otro componente      de la escena
     {
         if (instance == null)
@@ -16,5 +20,66 @@ public class GameManager : MonoBehaviour
     public static GameManager GetInstance() //Habilitamos la respuesta de instancia para el GameManager
     {
         return instance;
+    }
+    public void ChangeScene (string sceneName)
+    {
+        stage++;
+        SceneManager.LoadScene(sceneName);
+    }
+    public void NextLevel()
+    {
+        if (stage>=scenesInOrder.Length)
+        {
+            ReturnMenu();
+        }
+        else
+        {
+            ChangeScene(scenesInOrder[stage]);
+        }
+    }
+    void Start()
+    {
+        pauseCanvas.SetActive(false);
+    }
+    void Update()
+    {
+        if(SceneManager.GetActiveScene().name != "Menu")
+        {
+            menuCanvas.SetActive(false);
+            if(Input.GetKeyDown(KeyCode.Escape))
+            {
+                if(gamePaused)
+                {
+                    Return ();
+                }
+                else
+                {
+                    Pause ();
+                }
+            }
+        }
+        else
+        {
+            menuCanvas.SetActive(true);
+        }
+    }
+    public void ReturnMenu()
+    {
+        stage = 1;
+        pauseCanvas.SetActive(false);
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Menu");
+    }
+    public void Return()
+    {
+        pauseCanvas.SetActive(false);
+        Time.timeScale = 1f;
+        gamePaused = false;
+    }
+    void Pause()
+    {
+        pauseCanvas.SetActive(true);
+        Time.timeScale = 0f;
+        gamePaused = true;
     }
 }
