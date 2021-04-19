@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     }
     public void NextLevel()
     {
-        if (stage>=scenesInOrder.Length)
+        if (stage >= scenesInOrder.Length)
         {
             ReturnMenu();
         }

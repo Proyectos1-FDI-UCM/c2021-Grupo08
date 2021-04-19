@@ -5,13 +5,13 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private SpriteRenderer mySpriteRenderer;
+    PlayerHealth vida;
     Rigidbody2D rb;
     public float velocity = 5f;
     public Animator animator;
     float horizontal, vertical;
     public bool tiempoespera = false;
     public bool tiempogas = false;
-    public int vida = 200;
 
     void Awake()
     {
@@ -45,11 +45,11 @@ public class PlayerController : MonoBehaviour
             mySpriteRenderer.flipX = false;
         }
     }
-    /*private void OnTriggerEnter2D(Collider2D sierra)
+    private void OnTriggerEnter2D(Collider2D sierra)
     {
         if (sierra.tag == "Sierra" && !tiempoespera)
         {
-            vida -= 50;
+            vida.TakeDamage(30);
             tiempoespera = true;
             StartCoroutine("EsperarSierra");
         }
@@ -68,9 +68,9 @@ public class PlayerController : MonoBehaviour
     {
         if(gas.tag == "Gas" && !tiempogas)
         {                      
-                vida -= 10;
-                tiempogas = true;
-                StartCoroutine("EsperarGas");
+            vida.TakeDamage(10);
+            tiempogas = true;
+            StartCoroutine("EsperarGas");
         }
-    }*/
+    }
 }
