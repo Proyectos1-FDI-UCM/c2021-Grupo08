@@ -16,10 +16,8 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         mySpriteRenderer = GetComponent<SpriteRenderer>();
-    }
-    void Start()
-    {
         rb = GetComponent<Rigidbody2D>();
+        vida = GetComponent<PlayerHealth>();
     }
     void Update()
     {

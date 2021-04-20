@@ -19,7 +19,7 @@ public class EnemyAtkREMIX : MonoBehaviour
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, imAngryWith.transform.position - transform.position);
         //Para saber qué está "viendo"
-        Debug.Log("Raycast detected the following: " + hit.collider.name);
+        //Debug.Log("Raycast detected the following: " + hit.collider.name);
         //Reactivo el collider
         GetComponent<CapsuleCollider2D>().enabled = true;
 
