@@ -10,17 +10,20 @@ public class HealthRestore : MonoBehaviour
         if (col.gameObject.GetComponent<PlayerHealth>())
         {
             GameObject player = col.gameObject;
-            PlayerHealth PlayerHealth = player.GetComponent<PlayerHealth>();
-            if (PlayerHealth.health < PlayerHealth.maxHealth)
+            PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
+            if (playerHealth.health < playerHealth.maxHealth)
             {
-                if (PlayerHealth.health + restore <= PlayerHealth.maxHealth)
+                if (playerHealth.health + restore <= playerHealth.maxHealth)
                 {
-                    PlayerHealth.health += restore;
-                }
+                    playerHealth.health += restore;
 
+                    // llamo a este metodo para actualizar la barra de vida en la pantalla
+                    // para no poner otra variable publica en este script
+                    playerHealth.TakeDamage(0);
+                }
                 else
                 {
-                    PlayerHealth.health = PlayerHealth.maxHealth;
+                    playerHealth.health = playerHealth.maxHealth;
                 }
 
                 Destroy(this.gameObject);
