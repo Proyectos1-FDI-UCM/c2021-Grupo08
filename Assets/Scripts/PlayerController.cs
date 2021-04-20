@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer mySpriteRenderer;
     PlayerHealth vida;
     Rigidbody2D rb;
-    public float velocity = 5f;
+    public float velocity = 5f, immunityPostHit = 0.5f;
     public Animator animator;
     float horizontal, vertical;
     public bool tiempoespera = false;
@@ -43,25 +43,30 @@ public class PlayerController : MonoBehaviour
             mySpriteRenderer.flipX = false;
         }
     }
-    private void OnTriggerEnter2D(Collider2D sierra)
+    private void OnTriggerEnter2D(Collider2D oneHitEnemy)
     {
-        if (sierra.tag == "Sierra" && !tiempoespera)
+        if (!tiempoespera)
         {
-            vida.TakeDamage(30);
-            tiempoespera = true;
-            StartCoroutine("EsperarSierra");
+            if (oneHitEnemy.tag == "Sierra")
+            {
+                vida.TakeDamage(30);
+                tiempoespera = true;
+                StartCoroutine("EsperarGolpe");
+            }
+            else if (oneHitEnemy.tag == "Enemy")
+            {
+                vida.TakeDamage(50);
+                tiempoespera = true;
+                StartCoroutine("EsperarGolpe");
+            }
         }
     }
-    public IEnumerator EsperarSierra()
+    public IEnumerator EsperarGolpe()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(immunityPostHit);
         tiempoespera = false;
     }
-    public IEnumerator EsperarGas()
-    {
-        yield return new WaitForSeconds(1);
-        tiempogas = false;
-    }
+    
     private void OnTriggerStay2D(Collider2D gas)
     {
         if(gas.tag == "Gas" && !tiempogas)
@@ -71,4 +76,12 @@ public class PlayerController : MonoBehaviour
             StartCoroutine("EsperarGas");
         }
     }
+
+    public IEnumerator EsperarGas()
+    {
+        yield return new WaitForSeconds(2);
+        tiempogas = false;
+    }
+
+
 }

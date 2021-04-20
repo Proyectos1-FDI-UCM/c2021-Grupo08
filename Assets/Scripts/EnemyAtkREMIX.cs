@@ -1,27 +1,36 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyAtkREMIX : MonoBehaviour
 {
     //Dist. de detección, Dist. a la que se para
-    public float rangeOfDetection = 2f, rangeOfAttack = 1f;
+    public float rangeOfDetection = 2f, rangeOfAttack = 1f, attackRate = 1f, attackDuration = 1f;
     //Velocidad
     public int speed = 1;
     //Objeto al que debe perseguir
     public GameObject imAngryWith;
 
+    Collider2D daCollider;
+    
 
+    bool isItAtkTime = true;
+
+
+    private void Start()
+    {
+        daCollider = GetComponent<CapsuleCollider2D>();
+
+        //Desactivo collider al hacer el raycast para que no se detecte a sí mismo
+        daCollider.enabled = false;
+    }
     private void Update()
     {
-        //Desactivo collider al hacer el raycast para que no se detecte a sí mismo
-        GetComponent<CapsuleCollider2D>().enabled = false;
+        
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, imAngryWith.transform.position - transform.position);
         //Para saber qué está "viendo"
-        //Debug.Log("Raycast detected the following: " + hit.collider.name);
-        //Reactivo el collider
-        GetComponent<CapsuleCollider2D>().enabled = true;
+        Debug.Log("Raycast detected the following: " + hit.collider.name);
+        
 
         //Convierto en vector 2 la pos. de lo que tiene que perseguir
         Vector2 imAngryPos = new Vector2(imAngryWith.transform.position[0], imAngryWith.transform.position[1]);
@@ -59,6 +68,26 @@ public class EnemyAtkREMIX : MonoBehaviour
     //Pendiente de implementar
     private void Attack()
     {
-
+        if (isItAtkTime)
+        {
+            StartCoroutine("AttackDurator");
+            isItAtkTime = false;
+            StartCoroutine("AttackWaiter");
+        }
     }
+    public IEnumerator AttackDurator()
+    {
+        daCollider.enabled = true;
+        yield return new WaitForSeconds(attackDuration * 0.1f);
+        daCollider.enabled = false;
+    }
+
+    public IEnumerator AttackWaiter()
+    {
+        daCollider.enabled = false;
+        yield return new WaitForSeconds(attackRate);
+        isItAtkTime = true;
+    }
+
+    
 }
