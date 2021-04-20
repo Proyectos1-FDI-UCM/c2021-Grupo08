@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class WallEnemy : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float speed;
+    public float distance;
+    public Transform detection;
 
-    // Update is called once per frame
+    public LayerMask pared;
+
+    bool moveRight = false;
+    bool moveUp = true;
+
     void Update()
     {
-        
+        transform.Translate(Vector2.up * speed * Time.deltaTime);
+
+        RaycastHit2D hit = Physics2D.Raycast(detection.position, Vector2.down, distance, pared);
+        if(hit.collider == false)
+        {
+            
+        }
     }
 }
