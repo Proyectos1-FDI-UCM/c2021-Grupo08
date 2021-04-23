@@ -48,6 +48,7 @@
      <Compile Include="Assets\Scripts\NextLevel.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\PlayerHealth.cs" />
+     <Compile Include="Assets\Scripts\Puzzle.cs" />
      <Compile Include="Assets\Scripts\Sierra2.cs" />
      <Compile Include="Assets\Scripts\SpeedPowerUp.cs" />
      <Compile Include="Assets\Scripts\WP1.cs" />

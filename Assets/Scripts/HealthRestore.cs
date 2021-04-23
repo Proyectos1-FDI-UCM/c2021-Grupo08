@@ -24,6 +24,7 @@ public class HealthRestore : MonoBehaviour
                 else
                 {
                     playerHealth.health = playerHealth.maxHealth;
+                    playerHealth.TakeDamage(0);
                 }
 
                 Destroy(this.gameObject);
