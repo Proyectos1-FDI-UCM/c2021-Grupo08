@@ -131,7 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 62950514}
   - component: {fileID: 62950515}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tile (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -271,7 +271,7 @@ GameObject:
   m_Component:
   - component: {fileID: 144875614}
   - component: {fileID: 144875615}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tile (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -328,7 +328,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 300102476}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -354,6 +354,7 @@ Transform:
   - {fileID: 144875614}
   - {fileID: 1992665612}
   - {fileID: 1543024007}
+  - {fileID: 514291352}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -367,7 +368,7 @@ GameObject:
   m_Component:
   - component: {fileID: 310935235}
   - component: {fileID: 310935236}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tile (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -425,7 +426,7 @@ GameObject:
   m_Component:
   - component: {fileID: 373361357}
   - component: {fileID: 373361358}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spritesheet de prueba_49
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -507,7 +508,7 @@ GameObject:
   m_Component:
   - component: {fileID: 514291352}
   - component: {fileID: 514291353}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EmptySpace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -521,12 +522,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 514291351}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 300102476}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &514291353
 BoxCollider2D:
@@ -564,7 +565,7 @@ GameObject:
   m_Component:
   - component: {fileID: 613223886}
   - component: {fileID: 613223887}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spritesheet de prueba_49
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -646,7 +647,7 @@ GameObject:
   m_Component:
   - component: {fileID: 653922613}
   - component: {fileID: 653922614}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spritesheet de prueba_49
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -728,7 +729,7 @@ GameObject:
   m_Component:
   - component: {fileID: 726328719}
   - component: {fileID: 726328720}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spritesheet de prueba_49
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -810,7 +811,7 @@ GameObject:
   m_Component:
   - component: {fileID: 885442466}
   - component: {fileID: 885442467}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tile (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -868,7 +869,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1037783248}
   - component: {fileID: 1037783249}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tile (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -926,7 +927,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1179032703}
   - component: {fileID: 1179032704}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spritesheet de prueba_49
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1008,7 +1009,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1199672370}
   - component: {fileID: 1199672371}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spritesheet de prueba_49
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1090,7 +1091,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1330255497}
   - component: {fileID: 1330255498}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spritesheet de prueba_49
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1172,7 +1173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1370511684}
   - component: {fileID: 1370511685}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tile (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1230,7 +1231,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1543024007}
   - component: {fileID: 1543024008}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tile (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1288,7 +1289,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1710545791}
   - component: {fileID: 1710545792}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Spritesheet de prueba_49
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1370,7 +1371,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1992665612}
   - component: {fileID: 1992665613}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tile (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1514,4 +1515,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 550711a166d029ff7916eb5d513c25de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  casilla:
+    serializedVersion: 2
+    m_Bits: 0
   emptySpace: {fileID: 514291352}
+  distance: 4
