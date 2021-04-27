@@ -51,7 +51,6 @@
      <Compile Include="Assets\Scripts\Puzzle.cs" />
      <Compile Include="Assets\Scripts\Sierra2.cs" />
      <Compile Include="Assets\Scripts\SpeedPowerUp.cs" />
-     <Compile Include="Assets\Scripts\Tile.cs" />
      <Compile Include="Assets\Scripts\WP1.cs" />
     <Reference Include="UnityEngine">
         <HintPath>/home/anton/Unity/Hub/Editor/2019.4.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
