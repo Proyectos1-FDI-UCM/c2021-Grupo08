@@ -152,5 +152,6 @@ MonoBehaviour:
   rangeOfAttack: 1
   attackRate: 1
   attackDuration: 1
+  damage: 5
   speed: 2
   imAngryWith: {fileID: 0}

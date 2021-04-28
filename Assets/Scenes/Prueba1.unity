@@ -193,12 +193,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e564940df8d2c193688222670a31878c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  distance: 2
-  detection: {fileID: 2106198335}
-  pared:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!1 &53280326
 GameObject:
   m_ObjectHideFlags: 0
@@ -2279,6 +2273,11 @@ PrefabInstance:
       propertyPath: imAngryWith
       value: 
       objectReference: {fileID: 197508326}
+    - target: {fileID: 3533658519287071637, guid: cb33b0712c57c91bb80986ab1d45eeaa,
+        type: 3}
+      propertyPath: damage
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3740788977676482598, guid: cb33b0712c57c91bb80986ab1d45eeaa,
         type: 3}
       propertyPath: m_LocalPosition.x

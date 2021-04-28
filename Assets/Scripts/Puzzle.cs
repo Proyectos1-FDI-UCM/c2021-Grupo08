@@ -17,7 +17,7 @@ public class Puzzle : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
 
             //aseguramos que sea solo el tile
-            if(hit && hit.collider.gameObject.layer == 10)
+            if(hit && hit.collider.gameObject.layer == 13)
             {
                 if (hit.collider != null)
                 {
