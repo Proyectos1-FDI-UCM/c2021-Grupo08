@@ -13,7 +13,6 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-
         // si la vida llega a 0, muere
         if(currentHealth <= 0)
         {

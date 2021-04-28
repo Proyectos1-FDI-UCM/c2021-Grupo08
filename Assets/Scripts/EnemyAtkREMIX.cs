@@ -5,6 +5,7 @@ public class EnemyAtkREMIX : MonoBehaviour
 {
     //Dist. de detección, Dist. a la que se para
     public float rangeOfDetection = 2f, rangeOfAttack = 1f, attackRate = 1f, attackDuration = 1f;
+    public int damage;
     //Velocidad
     public int speed = 1;
     //Objeto al que debe perseguir
@@ -53,7 +54,7 @@ public class EnemyAtkREMIX : MonoBehaviour
             else
             {
                 Debug.DrawRay(transform.position, imAngryWith.transform.position - transform.position, Color.red);
-
+                daCollider.enabled = true;
                 Attack();
             }
         }
@@ -61,6 +62,7 @@ public class EnemyAtkREMIX : MonoBehaviour
         else
         {
             Debug.DrawRay(transform.position, imAngryWith.transform.position - transform.position, Color.gray);
+            daCollider.enabled = false;
         }
         
     }
@@ -79,7 +81,7 @@ public class EnemyAtkREMIX : MonoBehaviour
     {
         daCollider.enabled = true;
         yield return new WaitForSeconds(attackDuration * 0.1f);
-        daCollider.enabled = false;
+        imAngryWith.GetComponent<PlayerHealth>().TakeDamage(damage);
     }
 
     public IEnumerator AttackWaiter()
