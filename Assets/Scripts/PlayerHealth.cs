@@ -28,6 +28,12 @@ public class PlayerHealth : MonoBehaviour
         health -= damage;
         healthBar.SetHealth(health);
     }
-
+    void Update()
+    {
+        if (health<=0)
+        {
+            GameManager.GetInstance().ReturnMenu();
+        }
+    }
 
 }
