@@ -30,7 +30,7 @@ public class Puzzle : MonoBehaviour
                     Vector2 lastEmptySpacePosition = emptySpace.position;
                     Vector2 lastEmpty = empty.position;
                     emptySpace.position = hit.transform.position;
-
+                    
                     for (int i = 0; i < numOfTiles; i++)
                     {
                         if(hit.collider.gameObject.name == "Tile ("+ i +")")
