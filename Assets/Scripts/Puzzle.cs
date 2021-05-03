@@ -48,6 +48,5 @@ public class Puzzle : MonoBehaviour
     {
         Transform childTrans = cubes.transform.Find(name);
         return childTrans.gameObject;
-     
     }
 }
