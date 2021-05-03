@@ -8,6 +8,6 @@ public class CameraFollower : MonoBehaviour
     void Update () 
     {
         //mover la camara con el jugador
-        transform.position = new Vector3 (player.position.x, player.position.y, -10);
+        transform.position = new Vector3 (player.transform.position.x, player.transform.position.y, -10);
     }
 }
