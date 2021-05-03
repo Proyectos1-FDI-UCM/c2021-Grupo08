@@ -21,10 +21,6 @@ public class Puzzle : MonoBehaviour
             //aseguramos que sea solo el tile
             if(hit && hit.collider.gameObject.layer == 13)
             {
-                if (hit.collider != null)
-                {
-                    Debug.Log(hit.collider.name);
-                }
                 if(Vector2.Distance(emptySpace.position, hit.transform.position) < distance)
                 {
                     Vector2 lastEmptySpacePosition = emptySpace.position;
