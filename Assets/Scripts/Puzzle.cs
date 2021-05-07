@@ -5,7 +5,7 @@ public class Puzzle : MonoBehaviour
     public Transform emptySpace;
     public Transform empty;
     public int distance, numOfTiles;
-    public GameObject cubes;
+    public GameObject[] tile, cube;
     Camera mainCamera;
     void Start()
     {
@@ -29,24 +29,15 @@ public class Puzzle : MonoBehaviour
                     
                     for (int i = 0; i < numOfTiles; i++)
                     {
-                        if(hit.collider.gameObject.name == "Tile ("+ i +")")
+                        if(hit.collider.gameObject == tile[i])
                         {
-                            string name = "Cube (" + i + ")";
-                            Transform child = GetCube(cubes,name).transform;
-                            empty.position = child.position;
-                            child.position = lastEmpty;
-
+                            empty.position = cube[i].transform.position;
+                            cube[i].transform.position = lastEmpty;
                         }
                     }
                     hit.transform.position = lastEmptySpacePosition;
                 }
-
             }
         }
-    }
-    GameObject GetCube(GameObject cubes,string name)
-    {
-        Transform childTrans = cubes.transform.Find(name);
-        return childTrans.gameObject;
     }
 }
