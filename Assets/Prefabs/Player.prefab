@@ -200,8 +200,6 @@ MonoBehaviour:
   velocity: 5
   immunityPostHit: 2
   animator: {fileID: 750386514815452935}
-  tiempoespera: 0
-  tiempogas: 0
 --- !u!114 &750386514815452930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,7 +234,8 @@ MonoBehaviour:
   health: 0
   speed: 0
   maxHealth: 200
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 6110104914319716998, guid: 422badf6f882f204ca4d8bb5e5dd4ac9,
+    type: 3}
 --- !u!1 &750386515863806772
 GameObject:
   m_ObjectHideFlags: 0

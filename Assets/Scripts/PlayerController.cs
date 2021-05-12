@@ -10,8 +10,8 @@ public class PlayerController : MonoBehaviour
     public float velocity = 5f, immunityPostHit = 0.5f;
     public Animator animator;
     float horizontal, vertical;
-    public bool tiempoespera = false;
-    public bool tiempogas = false;
+    bool tiempoespera = false;
+    bool tiempogas = false;
 
     void Awake()
     {
@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
 
-        animator.SetFloat("Speed", Mathf.Abs(horizontal));
+        animator.SetFloat("Speed", Mathf.Abs(horizontal)); 
         Control();
     }
     void Control()

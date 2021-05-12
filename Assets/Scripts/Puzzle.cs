@@ -3,7 +3,7 @@ public class Puzzle : MonoBehaviour
 {
     // gameobject del espacio vacío del puzle
     public Transform emptySpace;
-    public Transform empty;
+    public Transform emptyCube;
     public int distance, numOfTiles;
     public GameObject[] tile, cube;
     Camera mainCamera;
@@ -24,14 +24,14 @@ public class Puzzle : MonoBehaviour
                 if(Vector2.Distance(emptySpace.position, hit.transform.position) < distance)
                 {
                     Vector2 lastEmptySpacePosition = emptySpace.position;
-                    Vector2 lastEmpty = empty.position;
+                    Vector2 lastEmpty = emptyCube.position;
                     emptySpace.position = hit.transform.position;
                     
                     for (int i = 0; i < numOfTiles; i++)
                     {
                         if(hit.collider.gameObject == tile[i])
                         {
-                            empty.position = cube[i].transform.position;
+                            emptyCube.position = cube[i].transform.position;
                             cube[i].transform.position = lastEmpty;
                         }
                     }

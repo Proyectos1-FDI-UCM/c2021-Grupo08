@@ -21,7 +21,6 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         healthBar.SetMaxHealth(maxHealth);
-
     }
     public void TakeDamage(int damage)
     {
