@@ -55,3 +55,6 @@ TagManager:
   - name: Black
     uniqueID: 3249519861
     locked: 0
+  - name: FondoColores
+    uniqueID: 1533822079
+    locked: 0
