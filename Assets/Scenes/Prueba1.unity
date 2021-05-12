@@ -7022,12 +7022,12 @@ PrefabInstance:
     - target: {fileID: 3740788977676482598, guid: cb33b0712c57c91bb80986ab1d45eeaa,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.801298
+      value: -8.96
       objectReference: {fileID: 0}
     - target: {fileID: 3740788977676482598, guid: cb33b0712c57c91bb80986ab1d45eeaa,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -31.929253
+      value: -30.84
       objectReference: {fileID: 0}
     - target: {fileID: 3740788977676482598, guid: cb33b0712c57c91bb80986ab1d45eeaa,
         type: 3}
@@ -8332,7 +8332,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1023787169}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -14502,6 +14502,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 197508327}
+  main: {fileID: 1786578238}
+  duration: 3
 --- !u!81 &1786578237
 AudioListener:
   m_ObjectHideFlags: 0
