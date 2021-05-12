@@ -73,7 +73,9 @@
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\HealthRestore.cs" />
     <Compile Include="Assets\Scripts\LifeBar.cs" />
+    <Compile Include="Assets\Scripts\MovEnemy1.cs" />
     <Compile Include="Assets\Scripts\MoviSierra.cs" />
+    <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\NextLevel.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
@@ -81,6 +83,7 @@
     <Compile Include="Assets\Scripts\Sierra2.cs" />
     <Compile Include="Assets\Scripts\SpeedPowerUp.cs" />
     <Compile Include="Assets\Scripts\WP1.cs" />
+    <Compile Include="Assets\Scripts\changeendir.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/software/programacion/unity/2019.4.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
