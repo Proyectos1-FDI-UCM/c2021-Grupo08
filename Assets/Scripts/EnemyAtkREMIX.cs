@@ -11,11 +11,13 @@ public class EnemyAtkREMIX : MonoBehaviour
     //Objeto al que debe perseguir
     public GameObject imAngryWith;
 
+    public LayerMask toFollow; 
     Collider2D daCollider;
     
 
     bool isItAtkTime = true;
 
+    string collided;
 
     private void Start()
     {
@@ -28,9 +30,21 @@ public class EnemyAtkREMIX : MonoBehaviour
     {
         
 
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, imAngryWith.transform.position - transform.position);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, imAngryWith.transform.position - transform.position, rangeOfDetection, toFollow);
         //Para saber qué está "viendo"
-        Debug.Log("Raycast detected the following: " + hit.collider.name);
+
+
+        //Problemas con los objetos "raycasteados" no teniendo nombres
+        try
+        {
+            collided = hit.collider.name;
+            Debug.Log("Raycast detected the following: " + collided);
+        }
+        catch
+        {
+            Debug.Log("Raycast detected unnamed entity!");
+            collided = null;
+        }
         
 
         //Convierto en vector 2 la pos. de lo que tiene que perseguir
@@ -39,7 +53,7 @@ public class EnemyAtkREMIX : MonoBehaviour
         float distSense = Vector2.Distance(transform.position, imAngryPos);
 
         //Se activa si es el objetivo
-        if (hit.collider.name == imAngryWith.name && rangeOfDetection > distSense)
+        if (collided == imAngryWith.name && rangeOfDetection > distSense)
         {
             Debug.Log("Detected the target!");
             //Mira si lo tiene que perseguir o atacar

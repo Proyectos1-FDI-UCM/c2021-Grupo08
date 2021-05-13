@@ -155,3 +155,6 @@ MonoBehaviour:
   damage: 5
   speed: 2
   imAngryWith: {fileID: 0}
+  toFollow:
+    serializedVersion: 2
+    m_Bits: 49152
