@@ -5,7 +5,7 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager instance; //Definimos la instancia del game manager. Paso imprescindible para el Singleton
     public string[] scenesInOrder;
-    public GameObject menuCanvas, pauseCanvas, puzzle3x2Canvas, puzzle3x3Canvas;
+    public GameObject menuCanvas, pauseCanvas;
     int stage=1;
     bool gamePaused = false;
     void Awake() //Utilizamos awake en vez de Start para asegurarnos que la UIManager se inicia antes que cualquier otro componente      de la escena
@@ -40,8 +40,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         pauseCanvas.SetActive(false);
-        puzzle3x2Canvas.SetActive(false);
-        puzzle3x3Canvas.SetActive(false);
         Cursor.visible = true;
     }
     void Update()
@@ -64,22 +62,6 @@ public class GameManager : MonoBehaviour
         else
         {
             menuCanvas.SetActive(true);
-        }
-        if (SceneManager.GetActiveScene().name == "Prueba1")
-        {
-            puzzle3x2Canvas.SetActive(true);
-        }
-        else
-        {
-            puzzle3x2Canvas.SetActive(false);
-        }
-        if (SceneManager.GetActiveScene().name == "Prueba2")
-        {
-            puzzle3x3Canvas.SetActive(true);
-        }
-        else
-        {
-            puzzle3x3Canvas.SetActive(false);
         }
     }
     public void ReturnMenu()
