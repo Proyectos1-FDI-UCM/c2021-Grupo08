@@ -64,6 +64,7 @@ public class PlayerController : MonoBehaviour
     public IEnumerator EsperarGolpe()
     {
         yield return new WaitForSeconds(immunityPostHit);
+        print("ha entrado");
         tiempoespera = false;
     }
     
