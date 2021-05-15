@@ -31,7 +31,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (health<=0)
         {
-            GameManager.GetInstance().ReturnMenu();
+            GameManager.GetInstance().GameOver();
         }
     }
 

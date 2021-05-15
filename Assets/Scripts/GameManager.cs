@@ -1,19 +1,24 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     private static GameManager instance; //Definimos la instancia del game manager. Paso imprescindible para el Singleton
     public string[] scenesInOrder;
-    public GameObject menuCanvas, pauseCanvas;
+    public GameObject menuCanvas, pauseCanvas, levelCanvas, endCanvas;
+    public Text levelText, endText;
+    public int duration;
     int stage=1;
-    bool gamePaused = false;
-    void Awake() //Utilizamos awake en vez de Start para asegurarnos que la UIManager se inicia antes que cualquier otro componente      de la escena
+    bool gamePaused = false, menuoff = false;
+    void Awake() //Utilizamos awake en vez de Start para asegurarnos que la UIManager se inicia antes que cualquier otro componente de la escena
     {
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(this.gameObject); //utilizamos este código para mantener el GameManager en todas los escenas pero                  teniéndolo únicamente en la primera
+            DontDestroyOnLoad(this.gameObject); //utilizamos este código para mantener el GameManager en todas los escenas pero teniéndolo únicamente en la primera
         }
         else Destroy(this.gameObject); //Eliminamos los prefabs que queden restantes
     }
@@ -25,11 +30,18 @@ public class GameManager : MonoBehaviour
     {
         stage++;
         SceneManager.LoadScene(sceneName);
+        StartCoroutine(Timer());
+    }
+    public void QuitGame()
+    {
+        Application.Quit();
     }
     public void NextLevel()
     {
         if (stage >= scenesInOrder.Length)
         {
+            endText.text = "You won";
+            StartCoroutine(End());
             ReturnMenu();
         }
         else
@@ -39,6 +51,8 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
+        endCanvas.SetActive(false);
+        levelCanvas.SetActive(false);
         pauseCanvas.SetActive(false);
         Cursor.visible = true;
     }
@@ -58,13 +72,14 @@ public class GameManager : MonoBehaviour
                     Pause ();
                 }
             }
+            levelText.text = SceneManager.GetActiveScene().name;
         }
-        else
+        else if(!menuoff)
         {
             menuCanvas.SetActive(true);
         }
     }
-    public void ReturnMenu()
+    void ReturnMenu()
     {
         stage = 1;
         pauseCanvas.SetActive(false);
@@ -82,5 +97,31 @@ public class GameManager : MonoBehaviour
         pauseCanvas.SetActive(true);
         Time.timeScale = 0f;
         gamePaused = true;
+    }
+    void Level()
+    {
+        levelCanvas.SetActive(true);
+    }
+    IEnumerator Timer()
+    {
+        yield return new WaitForSeconds(0.1f);
+        levelCanvas.SetActive(true);
+        yield return new WaitForSeconds(duration);
+        levelCanvas.SetActive(false);
+    }
+    IEnumerator End()
+    {
+        menuoff = true;
+        yield return new WaitForSeconds(0.1f);
+        endCanvas.SetActive(true);
+        yield return new WaitForSeconds(duration);
+        endCanvas.SetActive(false);
+        menuoff = false;
+    }
+    public void GameOver()
+    {
+        endText.text = "Game Over";
+        StartCoroutine(End());
+        ReturnMenu();
     }
 }

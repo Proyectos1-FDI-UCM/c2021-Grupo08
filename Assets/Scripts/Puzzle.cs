@@ -32,7 +32,7 @@ public class Puzzle : MonoBehaviour
                         if(hit.collider.gameObject == tile[i])
                         {
                             emptyCube.position = cube[i].transform.position;
-                            //cube[i].transform.position = transform.Translate(lastEmpty.x, lastEmpty.y 0);
+                            cube[i].transform.position = new Vector3(lastEmpty.x, lastEmpty.y, 0f);
                         }
                     }
                     hit.transform.position = lastEmptySpacePosition;
