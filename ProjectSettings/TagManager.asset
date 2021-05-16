@@ -58,6 +58,12 @@ TagManager:
   - name: FondoColores
     uniqueID: 1533822079
     locked: 0
+  - name: Paredes
+    uniqueID: 172940077
+    locked: 0
+  - name: Vinyeta
+    uniqueID: 3973117023
+    locked: 0
   - name: Tiles
     uniqueID: 2416503589
     locked: 0
