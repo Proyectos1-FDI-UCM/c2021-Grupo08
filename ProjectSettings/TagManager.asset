@@ -58,3 +58,6 @@ TagManager:
   - name: FondoColores
     uniqueID: 1533822079
     locked: 0
+  - name: Tiles
+    uniqueID: 2416503589
+    locked: 0
