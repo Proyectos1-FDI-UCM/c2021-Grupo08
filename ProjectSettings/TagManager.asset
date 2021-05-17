@@ -46,7 +46,7 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Player
+  - name: 
     uniqueID: 4022699765
     locked: 0
   - name: cartel
@@ -66,4 +66,7 @@ TagManager:
     locked: 0
   - name: Tiles
     uniqueID: 2416503589
+    locked: 0
+  - name: player
+    uniqueID: 544996629
     locked: 0
