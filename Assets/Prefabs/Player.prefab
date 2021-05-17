@@ -217,7 +217,7 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 2048
-  attackDamage: 40
+  attackDamage: 50
   animator: {fileID: 750386514815452935}
 --- !u!114 &750386514815452933
 MonoBehaviour:
@@ -234,6 +234,7 @@ MonoBehaviour:
   health: 0
   speed: 0
   maxHealth: 200
+  animator: {fileID: 0}
   healthBar: {fileID: 6110104914319716998, guid: 422badf6f882f204ca4d8bb5e5dd4ac9,
     type: 3}
 --- !u!1 &750386515863806772

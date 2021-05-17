@@ -21235,8 +21235,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9a666a9228d93a778448c7fa818af5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  multiplier: 3
-  duration: 5
+  multiplier: 2
+  duration: 15
 --- !u!61 &6844666607776723538
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22288,7 +22288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiplier: 2
-  duration: 15
+  duration: 30
 --- !u!1 &8044866537839964092
 GameObject:
   m_ObjectHideFlags: 0
@@ -22443,7 +22443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiplier: 2
-  duration: 15
+  duration: 30
 --- !u!1 &8044866539156651848
 GameObject:
   m_ObjectHideFlags: 0
