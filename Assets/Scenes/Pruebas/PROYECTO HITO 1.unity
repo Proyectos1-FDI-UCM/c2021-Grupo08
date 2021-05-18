@@ -200,6 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b6914fb48ddcede1809b6cf44326ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tile: {fileID: 0}
 --- !u!1 &24275882
 GameObject:
   m_ObjectHideFlags: 0
@@ -852,6 +853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b6914fb48ddcede1809b6cf44326ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tile: {fileID: 0}
 --- !u!1 &103836048
 GameObject:
   m_ObjectHideFlags: 0
@@ -1361,8 +1363,6 @@ MonoBehaviour:
   velocity: 5
   immunityPostHit: 0.5
   animator: {fileID: 197508334}
-  tiempoespera: 0
-  tiempogas: 0
 --- !u!114 &197508331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1397,6 +1397,7 @@ MonoBehaviour:
   health: 0
   speed: 0
   maxHealth: 200
+  animator: {fileID: 197508334}
   healthBar: {fileID: 176422917}
 --- !u!212 &197508333
 SpriteRenderer:
@@ -2005,6 +2006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b6914fb48ddcede1809b6cf44326ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tile: {fileID: 0}
 --- !u!1 &230528213
 GameObject:
   m_ObjectHideFlags: 0
@@ -3677,7 +3679,7 @@ SpriteRenderer:
   m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &441369729
@@ -3759,6 +3761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b6914fb48ddcede1809b6cf44326ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tile: {fileID: 0}
 --- !u!1 &441469459
 GameObject:
   m_ObjectHideFlags: 0
@@ -4440,6 +4443,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 197508327}
+  main: {fileID: 0}
+  vignette: {fileID: 0}
+  duration: 1
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -4511,10 +4517,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   emptySpace: {fileID: 809240057}
-  empty: {fileID: 1224131206}
+  emptyCube: {fileID: 0}
   distance: 1
   numOfTiles: 8
-  cubes: {fileID: 1413856196}
+  tile: []
+  cube: []
 --- !u!1 &526805074
 GameObject:
   m_ObjectHideFlags: 0
@@ -4951,6 +4958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b6914fb48ddcede1809b6cf44326ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tile: {fileID: 0}
 --- !u!1 &618654491
 GameObject:
   m_ObjectHideFlags: 0
@@ -7151,6 +7159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b6914fb48ddcede1809b6cf44326ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tile: {fileID: 0}
 --- !u!1 &888272378
 GameObject:
   m_ObjectHideFlags: 0
@@ -8982,6 +8991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b6914fb48ddcede1809b6cf44326ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tile: {fileID: 0}
 --- !u!1 &1235350936
 GameObject:
   m_ObjectHideFlags: 0
@@ -10366,7 +10376,7 @@ SpriteRenderer:
   m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1376284636
@@ -11140,6 +11150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b6914fb48ddcede1809b6cf44326ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tile: {fileID: 0}
 --- !u!1 &1495715471
 GameObject:
   m_ObjectHideFlags: 0
@@ -11539,7 +11550,7 @@ SpriteRenderer:
   m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1550079877
@@ -11940,7 +11951,7 @@ SpriteRenderer:
   m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1577536217
@@ -12591,6 +12602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b6914fb48ddcede1809b6cf44326ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tile: {fileID: 0}
 --- !u!1 &1634252595
 GameObject:
   m_ObjectHideFlags: 0
@@ -13786,7 +13798,7 @@ SpriteRenderer:
   m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1847616476
@@ -14999,7 +15011,7 @@ SpriteRenderer:
   m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1969242717
@@ -16063,7 +16075,7 @@ SpriteRenderer:
   m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2082463389
@@ -16203,7 +16215,7 @@ SpriteRenderer:
   m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2104010478

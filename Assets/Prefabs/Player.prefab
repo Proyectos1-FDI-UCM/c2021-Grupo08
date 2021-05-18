@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 750386514056237050}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.036, y: 0.009, z: 0}
+  m_LocalPosition: {x: -0.041, y: 0.157, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 750386514815452942}
@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 750386514815452933}
   m_Layer: 14
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,8 +124,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 544996629
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -200,6 +200,7 @@ MonoBehaviour:
   velocity: 5
   immunityPostHit: 2
   animator: {fileID: 750386514815452935}
+  gas: {fileID: 0}
 --- !u!114 &750386514815452930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,11 +214,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPoint: {fileID: 750386514056237053}
-  attackRange: 0.64
+  attackRange: 0.5
   enemyLayers:
     serializedVersion: 2
     m_Bits: 2048
-  attackDamage: 40
+  attackDamage: 50
   animator: {fileID: 750386514815452935}
 --- !u!114 &750386514815452933
 MonoBehaviour:
@@ -234,8 +235,8 @@ MonoBehaviour:
   health: 0
   speed: 0
   maxHealth: 200
-  healthBar: {fileID: 6110104914319716998, guid: 422badf6f882f204ca4d8bb5e5dd4ac9,
-    type: 3}
+  animator: {fileID: 750386514815452935}
+  healthBar: {fileID: 0}
 --- !u!1 &750386515863806772
 GameObject:
   m_ObjectHideFlags: 0

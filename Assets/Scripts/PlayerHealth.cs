@@ -3,6 +3,8 @@
 public class PlayerHealth : MonoBehaviour
 {
     public float health = 0f, speed= 0f, maxHealth = 200f;
+    public Animator animator;
+    private float cooldown = 0f;
     /*private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.GetComponent<Enemy1>()) // No tenemos script del enemigo 1 todavía -> Hito 2
@@ -16,6 +18,7 @@ public class PlayerHealth : MonoBehaviour
     void Awake()
     {
         health = maxHealth;
+
     }
 
     void Start()
@@ -26,6 +29,13 @@ public class PlayerHealth : MonoBehaviour
     {
         health -= damage;
         healthBar.SetHealth(health);
+        animator.SetBool("Hurt", true);
+        if (Time.time >= cooldown)
+        {
+            cooldown = (Time.time + 1f);
+            animator.SetBool("Hurt", false);
+        }
+
     }
     void Update()
     {

@@ -12,12 +12,16 @@ public class PlayerController : MonoBehaviour
     float horizontal, vertical;
     bool tiempoespera = false;
     bool tiempogas = false;
+    public GameObject gas;
+    SpriteRenderer spriteGas;
 
     void Awake()
     {
+        spriteGas = gas.GetComponent<SpriteRenderer>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         vida = GetComponent<PlayerHealth>();
+        spriteGas.enabled = false;
     }
     void Update()
     {
@@ -71,18 +75,25 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerStay2D(Collider2D gas)
     {
         if(gas.tag == "Gas" && !tiempogas)
-        {                      
+        {
             vida.TakeDamage(10);
+            spriteGas.enabled = true;
             tiempogas = true;
             StartCoroutine("EsperarGas");
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Gas")
+        { 
+            spriteGas.enabled = false;
         }
     }
 
     public IEnumerator EsperarGas()
     {
         yield return new WaitForSeconds(2);
-        tiempogas = false;
-    }
+        tiempogas = false;    }
 
 
 }
