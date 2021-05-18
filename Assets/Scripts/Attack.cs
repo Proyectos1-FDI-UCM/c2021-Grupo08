@@ -7,10 +7,18 @@ public class Attack : MonoBehaviour
     public LayerMask enemyLayers;
     public int attackDamage = 40;
     public Animator animator;
+    public GameObject prefabParticula;
 
-    private float attackRate = 1;
-    private float nextAttackTime = 0f;
+    private float attackRate = 1, particleRate = 2f;
+    private float nextAttackTime = 0f, cooldown = 0f;
+    ParticleSystem ps;
 
+    private void Start()
+    {
+        ps = GetComponent<ParticleSystem>();
+        var emission = ps.emission;
+        emission.enabled = false;
+    }
     void Update()
     {
         // si ha pasado más tiempo del cooldown
@@ -41,7 +49,9 @@ public class Attack : MonoBehaviour
         {
             // acceder al componente de cada enemigo
             enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
-            Debug.Log("Damage:"+enemy.name);
+            var emission = ps.emission;
+            emission.enabled = true;
+            ps.Emit(2);
         }
     }
 

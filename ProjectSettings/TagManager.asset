@@ -61,12 +61,21 @@ TagManager:
   - name: Paredes
     uniqueID: 172940077
     locked: 0
+  - name: Particles
+    uniqueID: 4110507887
+    locked: 0
   - name: Vinyeta
     uniqueID: 3973117023
     locked: 0
-  - name: Tiles
-    uniqueID: 2416503589
+  - name: Particulas
+    uniqueID: 2816776969
     locked: 0
   - name: player
     uniqueID: 544996629
+    locked: 0
+  - name: Gas
+    uniqueID: 2114066241
+    locked: 0
+  - name: Tiles
+    uniqueID: 2416503589
     locked: 0
