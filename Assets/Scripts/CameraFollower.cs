@@ -9,6 +9,20 @@ public class CameraFollower : MonoBehaviour
     public GameObject vignette;
     public int duration = 1; 
     bool zoom = false;
+    public GameObject tiles;
+    public GameObject healthbar;
+    
+    
+    
+
+    void Start()
+    {
+        StartCoroutine(Scenecamera());
+        StartCoroutine(Scenegame());
+       
+       
+    }
+
     void Update () 
     {
         //mover la camara con el jugador
@@ -34,5 +48,20 @@ public class CameraFollower : MonoBehaviour
         main.orthographicSize /= 2;
         main.transform.localScale /= 2;
         zoom = false;
+    }
+    IEnumerator Scenecamera()
+    {
+        vignette.SetActive(false);
+        tiles.SetActive(false);
+        healthbar.SetActive(false);
+        
+        yield return new WaitForSeconds(15);
+    }
+    IEnumerator Scenegame()
+    {
+        yield return new WaitForSeconds(16);
+        tiles.SetActive(true);
+        healthbar.SetActive(true);
+        vignette.SetActive(true);
     }
 }
