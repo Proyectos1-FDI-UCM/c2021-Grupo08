@@ -21,7 +21,7 @@ public class Sierra2 : MonoBehaviour
         if (collision.gameObject.tag == "pared")
         {
             speed *= -1;
-            this.transform.localScale = new Vector2(this.transform.localScale.x * -1, this.transform.localScale.y);
+            this.transform.localScale = new Vector2(this.transform.localScale.x , this.transform.localScale.y);
         }
     }
 }
