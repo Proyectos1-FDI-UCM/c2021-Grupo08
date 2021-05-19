@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer mySpriteRenderer;
     PlayerHealth vida;
     Rigidbody2D rb;
+    public GameObject player;
     public float velocity = 5f, immunityPostHit = 0.5f;
     public Animator animator;
     float horizontal, vertical;
@@ -14,6 +15,10 @@ public class PlayerController : MonoBehaviour
     bool tiempogas = false;
     public GameObject gas;
     SpriteRenderer spriteGas;
+    public Vector3 initialPos;
+    
+    public bool disable;
+
 
     void Awake()
     {
@@ -22,12 +27,21 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         vida = GetComponent<PlayerHealth>();
         spriteGas.enabled = false;
+        initialPos = gameObject.transform.position;
     }
+
+     void Start()
+     {
+        StartCoroutine(Freeze());
+        StartCoroutine(Startgame());
+     }
     void Update()
     {
-        horizontal = Input.GetAxisRaw("Horizontal");
-        vertical = Input.GetAxisRaw("Vertical");
-
+        if (!disable)
+        {
+            horizontal = Input.GetAxisRaw("Horizontal");
+            vertical = Input.GetAxisRaw("Vertical");
+        }
         animator.SetFloat("Speed", Mathf.Abs(horizontal)); 
         Control();
     }
@@ -93,7 +107,19 @@ public class PlayerController : MonoBehaviour
     public IEnumerator EsperarGas()
     {
         yield return new WaitForSeconds(2);
-        tiempogas = false;    }
+        tiempogas = false;    
+    }
+    public IEnumerator Freeze()
+    {
+        disable = true;      
+        yield return new WaitForSeconds(15);
+        
+    }
+    public IEnumerator Startgame()
+    {
+        yield return new WaitForSeconds(16);
+        disable = false;
+    }
 
 
 }
