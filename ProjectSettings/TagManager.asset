@@ -46,7 +46,10 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: 
+  - name: FondoColores
+    uniqueID: 1533822079
+    locked: 0
+  - name: PowerUps and traps
     uniqueID: 4022699765
     locked: 0
   - name: cartel
@@ -54,9 +57,6 @@ TagManager:
     locked: 0
   - name: Black
     uniqueID: 3249519861
-    locked: 0
-  - name: FondoColores
-    uniqueID: 1533822079
     locked: 0
   - name: Paredes
     uniqueID: 172940077

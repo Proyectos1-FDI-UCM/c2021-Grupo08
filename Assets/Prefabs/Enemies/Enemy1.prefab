@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c17c8deb1fe8b4a93c5692801cf13c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rbody: {fileID: 1308517064055177541}
+  rbody: {fileID: 0}
   speedy: 0
   speedx: 0
   speedaux: 1
@@ -233,6 +233,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8532505763627140404, guid: 4aac65ae39b6ce04e8a1713229e3ebe9,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -272267531
+      objectReference: {fileID: 0}
+    - target: {fileID: 8532505763627140404, guid: 4aac65ae39b6ce04e8a1713229e3ebe9,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8532505763627140406, guid: 4aac65ae39b6ce04e8a1713229e3ebe9,
         type: 3}

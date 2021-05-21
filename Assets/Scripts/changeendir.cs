@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class changeendir : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
     public int dirx = 1;
     public int diry = 0;
     public Rigidbody2D rbody;
-    public int rotZ = 0;
+    public int rotZ;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
