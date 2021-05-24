@@ -1910,7 +1910,7 @@ PrefabInstance:
     - target: {fileID: 1045610422256866981, guid: c0cfbfa61da23ba9892adf7b688c18cd,
         type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 1045610422256866981, guid: c0cfbfa61da23ba9892adf7b688c18cd,
         type: 3}
@@ -6961,7 +6961,7 @@ PrefabInstance:
     - target: {fileID: 1057877649949040320, guid: ecf947858dd8cf7f2b8a1112fcd2f610,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 1057877649949040320, guid: ecf947858dd8cf7f2b8a1112fcd2f610,
         type: 3}
@@ -7425,7 +7425,7 @@ PrefabInstance:
     - target: {fileID: 6844666608157643218, guid: ab60f9c8c078cfdc4b28d68ac9f06e2f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6844666608157643218, guid: ab60f9c8c078cfdc4b28d68ac9f06e2f,
         type: 3}
@@ -11377,21 +11377,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ZonaGas (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1057877650657513228, guid: ecf947858dd8cf7f2b8a1112fcd2f610,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1057877650657513228, guid: ecf947858dd8cf7f2b8a1112fcd2f610,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: -272267531
-      objectReference: {fileID: 0}
-    - target: {fileID: 1057877650657513228, guid: ecf947858dd8cf7f2b8a1112fcd2f610,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecf947858dd8cf7f2b8a1112fcd2f610, type: 3}
@@ -17375,7 +17360,7 @@ PrefabInstance:
     - target: {fileID: 8044866537970901311, guid: 9472e9056766dbc8787bcec326b5a6b0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8044866537970901311, guid: 9472e9056766dbc8787bcec326b5a6b0,
         type: 3}
