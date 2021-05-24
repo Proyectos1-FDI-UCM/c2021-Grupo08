@@ -27,6 +27,10 @@ public class PlayerHealth : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
+        if(damage>0)
+        {
+            GameManager.GetInstance().Sounds(1);
+        }
         health -= damage;
         healthBar.SetHealth(health);
         animator.SetBool("Hurt", true);

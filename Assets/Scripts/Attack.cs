@@ -28,6 +28,7 @@ public class Attack : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown("v"))
             {
                 Attacking();
+                GameManager.GetInstance().Sounds(0);
                 nextAttackTime = (Time.time + 1f)/ attackRate;
                 // animacion del ataque
                 animator.SetBool("IsAttacking", true);

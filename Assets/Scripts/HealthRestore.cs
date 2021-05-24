@@ -16,6 +16,7 @@ public class HealthRestore : MonoBehaviour
                 if (playerHealth.health + restore <= playerHealth.maxHealth)
                 {
                     playerHealth.health += restore;
+                    GameManager.GetInstance().Sounds(4);
 
                     // llamo a este metodo para actualizar la barra de vida en la pantalla
                     // para no poner otra variable publica en este script

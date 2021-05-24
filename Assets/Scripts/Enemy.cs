@@ -23,6 +23,7 @@ public class Enemy : MonoBehaviour
     void Die()
     {
         Debug.Log("Enemy died");
+        GameManager.GetInstance().Sounds(2);
         // se destruye el enemigo
         Destroy(gameObject);
     }

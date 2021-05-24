@@ -124,4 +124,9 @@ public class GameManager : MonoBehaviour
         StartCoroutine(End());
         ReturnMenu();
     }
+    public void Sounds(int n)
+    {
+        var audioManager = GetComponentInChildren<AudioManager>();
+        audioManager.PlaySound(n);
+    }
 }
