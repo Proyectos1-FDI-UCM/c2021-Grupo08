@@ -26,7 +26,7 @@ public class Puzzle : MonoBehaviour
                     Vector2 lastEmptySpacePosition = emptySpace.position;
                     Vector2 lastEmpty = emptyCube.position;
                     emptySpace.position = hit.transform.position;
-                    GameManager.GetInstance().Sounds(3s);
+                    GameManager.GetInstance().Sounds(3);
 
                     for (int i = 0; i < numOfTiles; i++)
                     {
