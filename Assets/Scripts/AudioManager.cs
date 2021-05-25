@@ -13,5 +13,5 @@ public class AudioManager : MonoBehaviour
     public void PlaySound(int n)
     {
         audio.PlayOneShot(audioClips[n]);
-    }
+    }   
 }

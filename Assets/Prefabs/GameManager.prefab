@@ -47,3 +47,10 @@ MonoBehaviour:
   - Menu
   - Prueba1
   - Prueba2
+  menuCanvas: {fileID: 0}
+  pauseCanvas: {fileID: 0}
+  levelCanvas: {fileID: 0}
+  endCanvas: {fileID: 0}
+  levelText: {fileID: 0}
+  endText: {fileID: 0}
+  duration: 0
