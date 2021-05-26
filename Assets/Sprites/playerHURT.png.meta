@@ -8,6 +8,12 @@ TextureImporter:
   - first:
       213: -5411958854784753785
     second: playerHURT_1
+  - first:
+      213: -724952348128005572
+    second: playerHURT_0
+  - first:
+      213: -5834767980822779786
+    second: playerHURT_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -48,7 +54,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -96,10 +102,10 @@ TextureImporter:
       name: playerHURT_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 32
+        x: 4
+        y: 34
+        width: 18
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -107,8 +113,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb0741e881ece61a0800000000000000
-      internalID: -6814282581306740545
+      spriteID: c32beba2ea370f5f0800000000000000
+      internalID: -724952348128005572
       vertices: []
       indices: 
       edges: []
@@ -117,10 +123,10 @@ TextureImporter:
       name: playerHURT_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
+        x: 4
+        y: 2
+        width: 19
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +134,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78f5689681cd4e4b0800000000000000
-      internalID: -5411958854784753785
+      spriteID: 6782c347f6db60fa0800000000000000
+      internalID: -5834767980822779786
       vertices: []
       indices: 
       edges: []

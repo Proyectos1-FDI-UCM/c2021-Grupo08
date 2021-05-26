@@ -24,25 +24,23 @@ public class Attack : MonoBehaviour
         // si ha pasado más tiempo del cooldown
         if(Time.time >= nextAttackTime)
         {
+            // desactivar animacioin
+            animator.SetBool("IsAttacking", false);
             // ataque
             if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown("v"))
             {
                 Attacking();
                 GameManager.GetInstance().Sounds(0);
                 nextAttackTime = (Time.time + 1f)/ attackRate;
-                // animacion del ataque
-                animator.SetBool("IsAttacking", true);
             }
-            else
-            {
-                // desactivar animacioin
-                animator.SetBool("IsAttacking", false);
-            }
+            
         }
     }
     
     void Attacking()
     {
+        // animacion del ataque
+        animator.SetBool("IsAttacking", true);
         // detectar si el enemigo está en el rango de ataque a melee
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         // hacer daño a todos los enemigos que estén en el rango
