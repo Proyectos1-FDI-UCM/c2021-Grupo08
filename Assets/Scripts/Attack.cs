@@ -25,7 +25,6 @@ public class Attack : MonoBehaviour
         if(Time.time >= nextAttackTime)
         {
             // desactivar animacioin
-            animator.SetBool("IsAttacking", false);
             // ataque
             if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown("v"))
             {
@@ -40,7 +39,7 @@ public class Attack : MonoBehaviour
     void Attacking()
     {
         // animacion del ataque
-        animator.SetBool("IsAttacking", true);
+        animator.SetTrigger("IsAttacking");
         // detectar si el enemigo está en el rango de ataque a melee
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         // hacer daño a todos los enemigos que estén en el rango

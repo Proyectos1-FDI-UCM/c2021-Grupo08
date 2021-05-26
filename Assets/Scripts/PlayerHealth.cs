@@ -33,11 +33,10 @@ public class PlayerHealth : MonoBehaviour
         }
         health -= damage;
         healthBar.SetHealth(health);
-        animator.SetBool("Hurt", true);
+        animator.SetTrigger("Hurt");
         if (Time.time >= cooldown)
         {
             cooldown = (Time.time + 1f);
-            animator.SetBool("Hurt", false);
         }
 
     }
