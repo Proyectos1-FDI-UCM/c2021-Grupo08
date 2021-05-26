@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+//Código implementado por:
+//EDUARDO GALLARDO
+
 public class GameManager : MonoBehaviour
 {
     private static GameManager instance; //Definimos la instancia del game manager. Paso imprescindible para el Singleton
@@ -97,10 +100,6 @@ public class GameManager : MonoBehaviour
         pauseCanvas.SetActive(true);
         Time.timeScale = 0f;
         gamePaused = true;
-    }
-    void Level()
-    {
-        levelCanvas.SetActive(true);
     }
     IEnumerator Timer()
     {

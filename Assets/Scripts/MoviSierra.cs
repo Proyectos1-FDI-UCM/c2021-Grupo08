@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Código implementado por:
+//ALEJANDRO MARTÍNEZ
+
 public class MoviSierra : MonoBehaviour
 {
-
-    float speed = 1f;
     public Transform target;
+    private float speed = 1f;
     
-    // Update is called once per frame
     void Update()
     {
-        
         transform.Translate(new Vector2(0, speed * Time.deltaTime ));
     }
     public void OntriggerEnter2D(Collider2D other)

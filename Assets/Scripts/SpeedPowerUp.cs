@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Código implementado por:
+//EDUARDO GALLARDO
+
 public class SpeedPowerUp : MonoBehaviour
 {
     public float multiplier = 2f, duration = 5f;
+
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.GetComponent<PlayerHealth>())
@@ -15,12 +19,10 @@ public class SpeedPowerUp : MonoBehaviour
             GetComponent<Collider2D>().enabled = false;
         }
     }
+
     IEnumerator Speed(GameObject player)
     {
         player.GetComponent<PlayerController>().velocity *= multiplier;
-
-        
-
         yield return new WaitForSeconds(duration);
         player.GetComponent<PlayerController>().velocity /= multiplier;
 

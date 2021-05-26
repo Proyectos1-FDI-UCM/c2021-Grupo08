@@ -2797,7 +2797,6 @@ GameObject:
   m_Component:
   - component: {fileID: 321662109}
   - component: {fileID: 321662108}
-  - component: {fileID: 321662107}
   - component: {fileID: 321662106}
   - component: {fileID: 321662105}
   - component: {fileID: 321662104}
@@ -2939,14 +2938,6 @@ MonoBehaviour:
   duration: 3
   tiles: {fileID: 7748027647963267638}
   healthbar: {fileID: 1999599919}
---- !u!81 &321662107
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 321662102}
-  m_Enabled: 1
 --- !u!20 &321662108
 Camera:
   m_ObjectHideFlags: 0

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Código implementado por:
+//EDUARDO GALLARDO Y SIMONA ANTONOVA
 public class HealthRestore : MonoBehaviour
 {
     public float restore;

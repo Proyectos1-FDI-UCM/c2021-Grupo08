@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Código implementado por:
+//ALEJANDRO MARTÍNEZ
+
 public class MovEnemy1 : MonoBehaviour
 {
     public Rigidbody2D rbody;
@@ -16,11 +19,9 @@ public class MovEnemy1 : MonoBehaviour
         speedx = 0;
     }
 
-    // Update is called once per frame
     void Update()
     {
         rbody.velocity = new Vector2(speedx, speedy);
-
     }
 
 }

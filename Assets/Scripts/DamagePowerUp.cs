@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Código implementado por:
+//EDUARDO GALLARDO
+
 public class DamagePowerUp : MonoBehaviour
 {
     public int multiplier, duration;

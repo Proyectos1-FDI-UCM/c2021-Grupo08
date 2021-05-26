@@ -2,23 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Código implementado por:
+//CARLOS TOMÁS, ALEJANDRO MARTINEZ, SIMONA ANTONOVA
+
 public class PlayerController : MonoBehaviour
 {
-    private SpriteRenderer mySpriteRenderer;
-    PlayerHealth vida;
-    Rigidbody2D rb;
+    public Vector3 initialPos;
+    public GameObject gas;
+    public bool disable;
     public GameObject player;
     public float velocity = 5f, immunityPostHit = 0.5f;
     public Animator animator;
-    float horizontal, vertical;
-    bool tiempoespera = false;
-    bool tiempogas = false;
-    public GameObject gas;
-    SpriteRenderer spriteGas;
-    public Vector3 initialPos;
     
-    public bool disable;
-
+    private float horizontal, vertical;
+    private bool tiempoespera = false;
+    private bool tiempogas = false;
+    private SpriteRenderer spriteGas;
+    private SpriteRenderer mySpriteRenderer;
+    private PlayerHealth vida;
+    private Rigidbody2D rb;
 
     void Awake()
     {

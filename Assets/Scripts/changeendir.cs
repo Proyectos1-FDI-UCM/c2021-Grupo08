@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Código implementado por:
+//ALEJANDRO MARTÍNEZ
+
 public class changeendir : MonoBehaviour
 {
     public int dirx = 1;
@@ -15,7 +18,6 @@ public class changeendir : MonoBehaviour
         if (dir)
         {
             StartCoroutine(TiempoGirar());
-            print("Ha entrado");
             dir.speedx = dirx * dir.speedaux;
             dir.speedy = diry * dir.speedaux;
             rbody.transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, transform.localEulerAngles.z + rotZ);
@@ -24,7 +26,5 @@ public class changeendir : MonoBehaviour
     public IEnumerator TiempoGirar()
     {
         yield return new WaitForSeconds(1);
-        print("ha pasado 1 seg");
-
     }
 }

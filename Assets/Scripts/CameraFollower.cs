@@ -2,25 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Código implementado por:
+//ALEJANDRO MARTINEZ Y SIMONA ANTONOVA MIHAYLOVA
+
 public class CameraFollower : MonoBehaviour
 {
     public Transform player;
     public Camera main;
     public GameObject vignette;
     public int duration = 1; 
-    bool zoom = false;
     public GameObject tiles;
     public GameObject healthbar;
-    
-    
-    
 
+    private bool zoom = false;
+    
     void Start()
     {
         StartCoroutine(Scenecamera());
         StartCoroutine(Scenegame());
-       
-       
     }
 
     void Update () 

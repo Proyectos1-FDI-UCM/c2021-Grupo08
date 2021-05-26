@@ -3,9 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Código implementado por:
+//SIMONA ANTONOVA
+
 public class LifeBar : MonoBehaviour
 {
     public Slider slider;
+
+    // actualizar la barra de vida
 
     public void SetMaxHealth(float health)
     {

@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+//Código implementado por:
+//ENRIQUE JUAN GAMBOA
+
 public class EnemyAtkREMIX : MonoBehaviour
 {
     //Dist. de detección, Dist. a la que se para
@@ -10,42 +13,32 @@ public class EnemyAtkREMIX : MonoBehaviour
     public int speed = 1;
     //Objeto al que debe perseguir
     public GameObject imAngryWith;
-
     public LayerMask toFollow; 
-    Collider2D daCollider;
-    
 
-    bool isItAtkTime = true;
-
-    string collided;
+    private Collider2D daCollider;
+    private bool isItAtkTime = true;
+    private string collided;
 
     private void Start()
     {
         daCollider = GetComponent<CapsuleCollider2D>();
-
         //Desactivo collider al hacer el raycast para que no se detecte a sí mismo
         daCollider.enabled = false;
     }
     private void Update()
     {
-        
-
         RaycastHit2D hit = Physics2D.Raycast(transform.position, imAngryWith.transform.position - transform.position, rangeOfDetection, toFollow);
         //Para saber qué está "viendo"
-
 
         //Problemas con los objetos "raycasteados" no teniendo nombres
         try
         {
             collided = hit.collider.name;
-            Debug.Log("Raycast detected the following: " + collided);
         }
         catch
         {
-            Debug.Log("Raycast detected unnamed entity!");
             collided = null;
         }
-        
 
         //Convierto en vector 2 la pos. de lo que tiene que perseguir
         Vector2 imAngryPos = new Vector2(imAngryWith.transform.position[0], imAngryWith.transform.position[1]);
@@ -55,7 +48,6 @@ public class EnemyAtkREMIX : MonoBehaviour
         //Se activa si es el objetivo
         if (collided == imAngryWith.name && rangeOfDetection > distSense)
         {
-            Debug.Log("Detected the target!");
             //Mira si lo tiene que perseguir o atacar
             if (rangeOfAttack < distSense)
             {
@@ -78,7 +70,6 @@ public class EnemyAtkREMIX : MonoBehaviour
             Debug.DrawRay(transform.position, imAngryWith.transform.position - transform.position, Color.gray);
             daCollider.enabled = false;
         }
-        
     }
 
     //Pendiente de implementar
@@ -104,6 +95,4 @@ public class EnemyAtkREMIX : MonoBehaviour
         yield return new WaitForSeconds(attackRate);
         isItAtkTime = true;
     }
-
-    
 }

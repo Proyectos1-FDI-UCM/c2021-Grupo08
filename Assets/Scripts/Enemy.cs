@@ -1,9 +1,14 @@
 ﻿using UnityEngine;
 
+//Código implementado por:
+//SIMONA ANTONOVA MIHAYLOVA Y EDUARDO GALLARDO
+
 public class Enemy : MonoBehaviour
 {
     public int maxHealth = 100;
-    int currentHealth;
+
+    private int currentHealth;
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -13,7 +18,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        // si la vida llega a 0, muere
+        // si la vida llega a 0, el enemigo muere
         if(currentHealth <= 0)
         {
             Die();
@@ -22,7 +27,6 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        Debug.Log("Enemy died");
         GameManager.GetInstance().Sounds(2);
         // se destruye el enemigo
         Destroy(gameObject);

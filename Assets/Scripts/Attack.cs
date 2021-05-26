@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 
+//Código implementado por:
+//SIMONA ANTONOVA MIHAYLOVA Y EDUARDO GALLARDO
+
 public class Attack : MonoBehaviour
 {
     public Transform attackPoint;
@@ -9,12 +12,13 @@ public class Attack : MonoBehaviour
     public Animator animator;
     public GameObject prefabParticula;
 
-    private float attackRate = 1, particleRate = 2f;
-    private float nextAttackTime = 0f, cooldown = 0f;
+    private float attackRate = 1f;
+    private float nextAttackTime = 0f;
     ParticleSystem ps;
 
     private void Start()
     {
+        // variable del sistema de particulas
         ps = GetComponent<ParticleSystem>();
         var emission = ps.emission;
         emission.enabled = false;
@@ -24,8 +28,7 @@ public class Attack : MonoBehaviour
         // si ha pasado más tiempo del cooldown
         if(Time.time >= nextAttackTime)
         {
-            // desactivar animacioin
-            // ataque
+            // se puede atacar
             if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown("v"))
             {
                 Attacking();
@@ -47,20 +50,16 @@ public class Attack : MonoBehaviour
         {
             // acceder al componente de cada enemigo
             enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
+            // emitir partículas
             var emission = ps.emission;
             emission.enabled = true;
             ps.Emit(2);
         }
     }
 
-    // dibuja el radio de ataque en el inspector solo cuando está seleccionada
+    // dibuja el radio de ataque en el editor solo cuando está seleccionado el player
     void OnDrawGizmosSelected()
     {
-        // si no hay punto de ataque se sale del metodo
-        if(attackPoint == null)
-        {
-            return;
-        }
         // se dibuja una esfera del tamaño del rango
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
