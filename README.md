@@ -7,7 +7,7 @@
 - ✨Alejandro Martínez Fernández✨
 - ✨Enrique Juan Gamboa✨
 
->A steam technician, Sinrie, is tasked to maintain your mayor's eccentric house. Suddenly, she finds herself locked in a >twisted maze! Her Prototype House Order Neuroliser can move different rooms of the maze as it were a slide puzzle, but she >must be aware of the numerous perils that may await in every corner!
+>A steam technician, Sinrie, is tasked to maintain her mayor's eccentric house. Suddenly, she finds herself locked in a >twisted maze! Her Prototype House Order Neuroliser can move different rooms of the maze as it were a slide puzzle, but she >must be aware of the numerous perils that may await in every corner!
 >Help Sinrie escape the maze!
 
 ## Website
